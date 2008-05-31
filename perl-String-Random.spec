@@ -10,6 +10,7 @@ Group:      Development/Perl
 Summary:    Perl module to generate random strings based
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/String/%{module}-%{version}.tar.gz
+BuildRequires: perl(Module::Build)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
