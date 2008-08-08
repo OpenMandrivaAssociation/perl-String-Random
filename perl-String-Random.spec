@@ -1,6 +1,6 @@
 %define module   String-Random
 %define version    0.22
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{module}
 Version:    %{version}
