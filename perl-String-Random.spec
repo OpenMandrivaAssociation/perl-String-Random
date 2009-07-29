@@ -1,18 +1,19 @@
-%define module   String-Random
-%define version    0.22
-%define release    %mkrel 2
+%define upstream_name    String-Random
+%define upstream_version 0.22
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Perl module to generate random strings based
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/String/%{module}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Module::Build)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module makes it trivial to generate random strings.
@@ -26,7 +27,7 @@ this:
   print "Your password is ", $pass->randpattern("CCcc!ccn"), "\n";
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -47,4 +48,3 @@ rm -rf %{buildroot}
 %doc README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/String
-
