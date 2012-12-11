@@ -48,3 +48,21 @@ rm -rf %{buildroot}
 %doc README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/String
+
+
+%changelog
+* Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.220.0-1mdv2010.0
++ Revision: 404418
+- rebuild using %%perl_convert_version
+
+* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.22-2mdv2009.0
++ Revision: 268726
+- rebuild early 2009.0 package (before pixel changes)
+
+* Sat May 31 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.22-1mdv2009.0
++ Revision: 213695
+- import perl-String-Random
+
+
+* Sat May 31 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.22-1mdv2009.0
+- first mdv release
