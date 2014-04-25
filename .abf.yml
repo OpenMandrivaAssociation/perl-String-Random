@@ -1,2 +1,4 @@
+removed_sources:
+  String-Random-0.22.tar.gz: 95f028f64caf13b75b871e4545556d6f8be6653b
 sources:
-  "String-Random-0.22.tar.gz": 95f028f64caf13b75b871e4545556d6f8be6653b
+  String-Random-0.26.tar.gz: 94363bad2a334a70944692eefffc072b46e78ade
