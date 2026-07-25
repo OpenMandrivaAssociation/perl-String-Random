@@ -1,16 +1,16 @@
 %define upstream_name    String-Random
-%define upstream_version 0.26
+%define upstream_version 0.32
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Version:    %{upstream_version}
+Release:    1
 
 Summary:    Perl module to generate random strings based
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://github.com/shlomif/string-random
+Source0:    https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/String-Random-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Module::Build)
 BuildRequires: perl(JSON::PP)
