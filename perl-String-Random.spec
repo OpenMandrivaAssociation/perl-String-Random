@@ -1,16 +1,14 @@
 %define upstream_name    String-Random
-%define upstream_version 0.32
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    0.32
+Release:    2
 
 Summary:    Perl module to generate random strings based
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/shlomif/string-random
-Source0:    https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/String-Random-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/String-Random-%{version}.tar.gz
 
 BuildRequires: perl(Module::Build)
 BuildRequires: perl(JSON::PP)
@@ -28,7 +26,7 @@ this:
   print "Your password is ", $pass->randpattern("CCcc!ccn"), "\n";
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
